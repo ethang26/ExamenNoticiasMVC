@@ -1,0 +1,22 @@
+﻿@model PortalNoticias.Models.Post
+
+<h1>@Model.Title</h1>
+<p>@Model.Body</p>
+<p><b>Autor:</b> @ViewBag.User.Name</p>
+
+<h3>Comentarios:</h3>
+@foreach (var c in ViewBag.Comments)
+{
+    <p><b>@c.Name:</b> @c.Body</p>
+}
+
+<form method="post" asp-action="Feedback">
+    <input type="hidden" name="postId" value="@Model.Id" />
+    <button name="sentimiento" value="like">👍 Me gustó</button>
+    <button name="sentimiento" value="dislike">👎 No me gustó</button>
+</form>
+
+@if (TempData["Error"] != null)
+{
+    <p style="color:red;">@TempData["Error"]</p>
+}

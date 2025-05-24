@@ -1,0 +1,8 @@
+﻿@model List<PortalNoticias.Models.Post>
+
+<h1>Lista de Posts</h1>
+
+@foreach (var post in Model)
+{
+    <h2><a href="/Home/Post/@post.Id">@post.Title</a></h2>
+}

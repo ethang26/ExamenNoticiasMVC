@@ -1,0 +1,30 @@
+# Build artifacts
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+
+# ASP.NET artifacts
+project.lock.json
+project.fragment.lock.json
+
+# Database files (opcionales)
+*.db
+*.sqlite
+
+# Logs
+*.log
+
+# Rider / JetBrains
+.idea/
+
+# Others
+.env
